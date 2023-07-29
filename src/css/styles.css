@@ -9,6 +9,11 @@
   --white-cl-70: #ffffffb3;
 }
 
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--light-cl);
@@ -63,6 +68,11 @@ button {
 
 /** -------------HEADER------------- */
 
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
 .header-logo {
   font-size: 18px;
   font-weight: 700;
@@ -74,9 +84,10 @@ button {
   font-style: italic;
 }
 
-/* .header-navigation-list {
-
-} */
+.header-navigation-list {
+  display: flex;
+  gap: 24px;
+}
 
 /* .header-navigation-item {
 
@@ -94,13 +105,19 @@ button {
   color: var(--accent-cl);
 }
 
-/* .header-social {
-
-} */
+.header-social {
+  display: flex;
+  gap: 14px;
+}
 
 .header-social-item:hover path,
 .footer-item:hover path {
   stroke: var(--accent-cl);
+}
+
+.header-social-item {
+  display: inline-block;
+  height: 24px;
 }
 
 /* .header-social-link {
