@@ -9,9 +9,32 @@
   --white-cl-70: #ffffffb3;
 }
 
+/** RESET STYLES */
+
 * {
   padding: 0;
   box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
 }
 
 body {
@@ -26,10 +49,6 @@ address {
 
 a {
   text-decoration: none;
-}
-
-ul {
-  list-style: none;
 }
 
 h2 {
@@ -58,6 +77,16 @@ button {
   margin: -1px;
 }
 
+.container {
+  /* width: 1166px; */
+  width: 100%;
+  max-width: 1166px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/** END RESET STYLES */
+
 .orange {
   color: var(--accent-cl);
 }
@@ -66,11 +95,13 @@ button {
 
 } */
 
-/** -------------HEADER------------- */
+/** -------------HEADER START------------- */
 
 .header {
   display: flex;
   flex-direction: row;
+  padding-top: 24px;
+  padding-bottom: 32px;
 }
 
 .header-logo {
@@ -124,21 +155,30 @@ button {
 
 } */
 
-/** -------------HEADER------------- */
+/** -------------HEADER END------------- */
 
-/** -------------HERO------------- */
+/** -------------HERO START------------- */
 
 .hero {
+  padding-bottom: 80px;
+}
+
+.hero-wrap {
   background-image: url(../img/hero-img.jpg);
   height: 600px;
   background-repeat: round;
+  border-radius: 30px;
+  padding: 380px 40px 40px 40px;
 }
+
 .hero-title {
   color: var(--white-cl);
   font-size: 28px;
   font-weight: 500;
   line-height: 1.21; /* 121.429% */
   letter-spacing: -0.03em;
+  min-width: 484px;
+  margin-bottom: 32px;
 }
 .hero-btn {
   color: var(--white-cl);
@@ -166,17 +206,18 @@ button {
   letter-spacing: -0.03em;
 }
 
-/** -------------HERO------------- */
+/** -------------HERO END------------- */
 
-/** -------------BENEFITS------------- */
+/** -------------BENEFITS START------------- */
 
 .benefits {
   background-color: var(--violet-cl);
+  padding: 50px 0;
 }
 
-/* .benefits-list {
-
-} */
+.benefits-list {
+  padding: 0 19px;
+}
 
 /* .benefits-item {
 
@@ -186,6 +227,7 @@ button {
   color: var(--white-cl);
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 18px;
 }
 .benefits-item-text {
   color: var(--white-cl-70);
@@ -194,19 +236,28 @@ button {
   letter-spacing: -0.02em;
 }
 
-/** -------------BENEFITS------------- */
+/** -------------BENEFITS END------------- */
 
-/** -------------INGRIDIENTS------------- */
+/** -------------INGRIDIENTS START------------- */
 
-/* .ingridients-title {
+.ingridients {
+  padding-top: 120px;
+}
 
-} */
+.ingridients-title {
+  max-width: 412px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+}
 
 .ingridients-text {
   text-align: center;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  max-width: 486px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 /* .ingridients-list {
@@ -230,24 +281,35 @@ button {
 .black {
   color: var(--main-cl);
 }
-.bcg-orange {
+
+.ingridients-item:nth-child(4n + 1) {
   background-color: var(--accent-cl);
 }
-.bcg-black {
+
+.ingridients-item:nth-child(4n + 3) {
   background-color: var(--violet-cl);
 }
-.bcg-white {
+
+.ingridients-item:nth-child(even) {
   background-color: var(--white-cl);
 }
 
-/** -------------INGRIDIENTS------------- */
+/** -------------INGRIDIENTS END------------- */
 
-/** -------------PROCESS------------- */
+/** -------------PROCESS START------------- */
 
 .process {
+  padding-top: 120px;
 }
+
+.process-title {
+  margin-bottom: 50px;
+}
+
 .process-video {
+  border-radius: 30px;
 }
+
 .process-right-side {
   background-color: var(--white-cl);
 }
@@ -255,15 +317,12 @@ button {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33; /* 133.333% */
+  margin-bottom: 28px;
 }
-.process-list {
-  list-style: disc;
-  color: var(--gray-cl);
-}
-/* .process-item {
 
-} 
-*/
+.process-item:not(:last-child) {
+  margin-bottom: 24px;
+}
 
 .process-text {
   font-size: 14px;
@@ -271,17 +330,23 @@ button {
   letter-spacing: -0.02em;
 }
 
-/** -------------PROCESS------------- */
+/** -------------PROCESS END------------- */
 
-/** -------------PRODUCTS------------- */
+/** -------------PRODUCTS START------------- */
 
 .products {
+  margin-top: 120px;
 }
 .products-title {
+  margin-bottom: 50px;
 }
 .products-list {
 }
 .products-item {
+  background-color: var(--white-cl);
+  padding: 32px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
 }
 .products-img {
 }
@@ -292,40 +357,59 @@ button {
 .products-price {
 }
 
-/** -------------PRODUCTS------------- */
+/** -------------PRODUCTS END------------- */
 
-/** -------------TOP SELLERS------------- */
+/** -------------TOP SELLERS START------------- */
 
 .sellers {
 }
 .sellers-title {
+  padding: 120px 0 50px 0;
 }
 .sellers-list {
+  display: flex;
 }
 .sellers-item {
+  border-radius: 0px 0px 15px 15px;
+  border-right: 1px solid rgba(17, 17, 17, 0.1);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  border-left: 1px solid rgba(17, 17, 17, 0.1);
+  background-color: var(--white-cl);
 }
 .sellers-img {
+  margin-bottom: 28px;
 }
 .sellers-subtitle {
+  padding-bottom: 28px;
 }
 
-/** -------------TOP SELLERS------------- */
+/** -------------TOP SELLERS END------------- */
 
-/** -------------REVIEWS------------- */
+/** -------------REVIEWS START------------- */
 
 .reviews {
+  padding: 120px 0;
 }
 .reviews-title {
+  margin-bottom: 90px;
 }
 .reviews-list {
+  margin-bottom: 50px;
 }
 .reviews-item {
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background: #fff;
+  box-shadow: 0px 9.049315452575684px 100px 0px rgba(17, 17, 17, 0.03);
 }
 .reviews-img {
 }
 .reviews-subtitle {
+  text-align: center;
+  margin-bottom: 24px;
 }
 .reviews-text {
+  text-align: center;
 }
 .reviews-btn {
   color: var(--main-cl);
@@ -335,18 +419,21 @@ button {
   font-weight: 600;
   border-radius: 100px;
   border: 1px solid var(--accent-cl);
+  display: block;
+  margin: 0 auto;
 }
 .reviews-btn:is(:hover, :focus) {
   color: var(--white-cl);
   background-color: var(--accent-cl);
 }
 
-/** -------------REVIEWS------------- */
+/** -------------REVIEWS END------------- */
 
-/** -------------FOOTER------------- */
+/** -------------FOOTER START------------- */
 
 .footer {
   background-color: var(--violet-cl);
+  padding: 50px 0;
 }
 .footer-text {
   color: var(--white-cl);
@@ -354,6 +441,7 @@ button {
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: -0.02em;
+  max-width: 300px;
 }
 .footer-social,
 .address-text {
@@ -361,11 +449,13 @@ button {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29; /* 128.571% */
+  padding-bottom: 14px;
 }
 .footer-list {
 }
 .footer-item {
 }
+
 .footer-link {
 }
 
@@ -373,7 +463,8 @@ button {
 }
 .address-list {
 }
-.address-item {
+.address-item:not(:last-child) {
+  margin-bottom: 4px;
 }
 .address-link {
   color: var(--white-cl);
@@ -386,4 +477,4 @@ button {
   color: var(--white-cl);
 }
 
-/** -------------FOOTER------------- */
+/** -------------FOOTER END------------- */
