@@ -148,7 +148,6 @@ button {
 
 .header-social-item {
   display: inline-block;
-  height: 24px;
 }
 
 /* .header-social-link {
@@ -453,7 +452,13 @@ button {
 }
 .footer-list {
 }
+
 .footer-item {
+  display: inline-block;
+}
+
+.footer-item:hover {
+  color: var(--accent-cl);
 }
 
 .footer-link {
