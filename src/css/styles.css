@@ -91,6 +91,12 @@ button {
 
 /** END RESET STYLES */
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .orange {
   color: var(--accent-cl);
 }
@@ -214,6 +220,10 @@ button {
   border: 1px solid #fd9222;
   padding: 14px 40px;
   margin-right: 14px;
+  transition-property: color, background-color;
+  transition-duration: 300ms, 250ms;
+  /* transition-delay: 500ms; */
+  /* transition-timing-function: ease-in-out; */
 }
 .hero-btn:hover {
   color: var(--accent-cl);
@@ -274,6 +284,18 @@ button {
 
 .benefits-item {
   width: calc((100% - 2 * 88px) / 3);
+  position: relative;
+}
+
+.benefits-item:not(:last-child)::after {
+  content: '';
+  width: 1px;
+  height: 124px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  right: -44px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .benefits-item-top {
@@ -505,11 +527,38 @@ button {
   text-align: center;
   width: calc((100% - 32px) / 3);
 }
-.sellers-img {
-  margin-bottom: 28px;
+
+.sellers-cover {
+  position: absolute;
+  top: 0;
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(161deg, rgba(253, 253, 255, 0.1) 0%, rgba(8, 2, 21, 0) 100%);
+  backdrop-filter: blur(7.5px);
+  height: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
 }
+.sellers-cover-text {
+  color: var(--light-cl);
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.sellers-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.sellers-item:hover .sellers-cover {
+  transform: translateY(0);
+}
+
 .sellers-subtitle {
   padding-bottom: 28px;
+  margin-top: 28px;
 }
 
 /** -------------TOP SELLERS END------------- */
@@ -537,8 +586,8 @@ button {
 }
 .reviews-img {
   position: absolute;
-  left: 40%;
-  top: -40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .reviews-subtitle {
@@ -558,6 +607,9 @@ button {
   border: 1px solid var(--accent-cl);
   display: block;
   margin: 0 auto;
+  padding: 14px 40px;
+  transition-property: color, background-color;
+  transition-duration: 300ms, 250ms;
 }
 .reviews-btn:is(:hover, :focus) {
   color: var(--white-cl);
@@ -571,6 +623,7 @@ button {
 .footer {
   background-color: var(--violet-cl);
   padding: 50px 0;
+  display: flex;
 }
 .footer-text {
   color: var(--white-cl);
@@ -603,6 +656,8 @@ button {
 .address-link {
   color: var(--white-cl);
 }
+
+
 .footer-social-icon {
   fill: transparent;
   stroke: var(--white-cl);
@@ -612,4 +667,39 @@ button {
   color: var(--white-cl);
 }
 
+.footer-nav-list {
+  display: flex;
+  gap: 24px;
+}
+
 /** -------------FOOTER END------------- */
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(76, 76, 76, 0.596);
+  top: 0;
+  transition: opacity 300ms, visibility 300ms linear;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 517px;
+  min-height: 794px;
+  border-radius: 15px;
+  background-color: var(--light-cl);
+  transition: transform 300ms linear;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}

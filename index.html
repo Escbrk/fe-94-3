@@ -414,30 +414,57 @@
           <h2 class="sellers-title"><span class="orange">tOp</span> Sellers</h2>
           <ul class="sellers-list">
             <li class="sellers-item">
-              <img
-                class="sellers-img"
-                src="./src/img/sellers/img-1.jpg"
-                alt="CHOCOLATE WITH NUTS"
-                width="368"
-              />
+              <div class="sellers-cover-wrap">
+                <img
+                  class="sellers-img"
+                  src="./src/img/sellers/img-1.jpg"
+                  alt="CHOCOLATE WITH NUTS"
+                  width="368"
+                />
+                <div class="sellers-cover">
+                  <p class="sellers-cover-text">
+                    Chocolate with fruit is an unbeatable combination of two of the tastiest things
+                    in the world. This dessert combines delicate and aromatic chocolate with fresh
+                    and juicy fruits, creating a true poetry of taste.
+                  </p>
+                </div>
+              </div>
               <h3 class="sellers-subtitle">CHOCOLATE WITH NUTS</h3>
             </li>
             <li class="sellers-item">
-              <img
-                class="sellers-img"
-                src="./src/img/sellers/img-2.jpg"
-                alt="CHOCOLATE WITH FRUITS"
-                width="368"
-              />
+              <div class="sellers-cover-wrap">
+                <img
+                  class="sellers-img"
+                  src="./src/img/sellers/img-2.jpg"
+                  alt="CHOCOLATE WITH FRUITS"
+                  width="368"
+                />
+                <div class="sellers-cover">
+                  <p class="sellers-cover-text">
+                    Chocolate with fruit is an unbeatable combination of two of the tastiest things
+                    in the world. This dessert combines delicate and aromatic chocolate with fresh
+                    and juicy fruits, creating a true poetry of taste.
+                  </p>
+                </div>
+              </div>
               <h3 class="sellers-subtitle">CHOCOLATE WITH FRUITS</h3>
             </li>
             <li class="sellers-item">
-              <img
-                class="sellers-img"
-                src="./src/img/sellers/img-3.jpg"
-                alt="DARK CHOCOLATE"
-                width="368"
-              />
+              <div class="sellers-cover-wrap">
+                <img
+                  class="sellers-img"
+                  src="./src/img/sellers/img-3.jpg"
+                  alt="DARK CHOCOLATE"
+                  width="368"
+                />
+                <div class="sellers-cover">
+                  <p class="sellers-cover-text">
+                    Chocolate with fruit is an unbeatable combination of two of the tastiest things
+                    in the world. This dessert combines delicate and aromatic chocolate with fresh
+                    and juicy fruits, creating a true poetry of taste.
+                  </p>
+                </div>
+              </div>
               <h3 class="sellers-subtitle">DARK CHOCOLATE</h3>
             </li>
           </ul>
@@ -489,7 +516,7 @@
               </p>
             </li>
           </ul>
-          <button class="reviews-btn" type="button">Leave a review</button>
+          <button class="reviews-btn" type="button" data-modal-open>Leave a review</button>
         </div>
       </section>
     </main>
@@ -575,5 +602,12 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" data-modal-close type="button"> X </button>
+      </div>
+    </div>
+
+    <script src="./src/js/modal.js"></script>
   </body>
 </html>
