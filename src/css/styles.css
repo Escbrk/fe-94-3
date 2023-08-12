@@ -594,6 +594,7 @@ button {
 .reviews-subtitle {
   text-align: center;
   margin-bottom: 24px;
+  padding-top: 56px;
 }
 .reviews-text {
   text-align: center;
@@ -884,9 +885,7 @@ button {
   align-items: center;
   position: relative;
 }
-.modal-check {
-  display: none;
-}
+
 .modal-close-btn svg {
   stroke: var(--main-cl);
 }
