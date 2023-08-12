@@ -596,9 +596,11 @@ button {
   margin-bottom: 24px;
   padding-top: 56px;
 }
+
 .reviews-text {
   text-align: center;
 }
+
 .reviews-btn {
   color: var(--main-cl);
   background-color: var(--white-cl);
