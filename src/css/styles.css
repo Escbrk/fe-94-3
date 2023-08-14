@@ -249,7 +249,7 @@ button {
   color: var(--white-cl);
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.29; /* 128.571% */
+  line-height: 1.29;
   letter-spacing: -0.03em;
   display: flex;
   align-items: center;
@@ -257,12 +257,20 @@ button {
   margin-left: auto;
 }
 
-.hero-down-icon {
+.down-icon-wrap {
   display: flex;
   width: 38px;
   height: 38px;
   background-color: var(--white-cl);
   border-radius: 50%;
+  position: relative;
+}
+.scroll-down-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--accent-cl);
 }
 
 .hero-buttons {
@@ -839,7 +847,7 @@ button {
   display: inline-block;
   margin-bottom: 8px;
 }
- .modal-input-wrap {
+.modal-input-wrap {
   position: relative;
 }
 .modal-icon {
