@@ -8,6 +8,12 @@
   .container {
     max-width: 734px;
   }
+
+  .title {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
   .benefits {
     padding: 50px 0;
   }
@@ -17,6 +23,23 @@
   }
   .benefits-item {
     width: calc((100% - 88px) / 2);
+  }
+  .ingridients {
+    padding-top: 100px;
+  }
+  
+  .ingridients-title {
+    margin-bottom: 50px;
+  }
+
+  .ingridients-item {
+    width: calc((100% - 32px) / 2);
+  }
+  .ingridients-list {
+    gap: 32px;
+  }
+  .ingridients-item:not(:nth-child(-n + 4)) {
+    display: show;
   }
 }
 
