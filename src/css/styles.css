@@ -19,6 +19,8 @@
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 p,
@@ -30,6 +32,15 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
 }
 
 ul,
@@ -56,7 +67,6 @@ a {
   text-decoration: none;
 }
 
-
 button {
   cursor: pointer;
 }
@@ -72,16 +82,6 @@ button {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-}
-
-.title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: var(--main-cl);
 }
 
 .container {
@@ -195,21 +195,21 @@ button {
 .hero-wrap {
   background-color: var(--main-cl);
   background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
-    url(../img/hero-img.jpg);
+    url(../img/hero-img-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 30px;
-  padding: 380px 40px 40px 40px;
+  padding: 395px 20px 20px;
 }
 
 .hero-title {
   color: var(--white-cl);
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.21; /* 121.429% */
+  line-height: 1.21;
   letter-spacing: -0.03em;
-  min-width: 484px;
+  max-width: 484px;
   margin-bottom: 32px;
 }
 .hero-btn {
@@ -220,7 +220,7 @@ button {
   background-color: var(--accent-cl);
   border-radius: 100px;
   border: 1px solid #fd9222;
-  padding: 14px 40px;
+  padding: 12px 14px;
   margin-right: 14px;
   transition-property: color, background-color;
   transition-duration: 300ms, 250ms;
@@ -235,7 +235,7 @@ button {
   color: var(--white-cl);
   font-size: 14px;
   font-weight: 600;
-  padding: 14px 40px;
+  padding: 12px 14px;
   border-radius: 100px;
   border: 1px solid #fff;
 }
@@ -255,7 +255,8 @@ button {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-left: auto;
+  /* margin-left: auto; */
+  margin-top: 32px;
 }
 
 .down-icon-wrap {
@@ -276,6 +277,7 @@ button {
 
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
 }
 /** -------------HERO END------------- */
 
@@ -353,7 +355,7 @@ button {
   padding: 28px 23px;
 }
 
-.ingridients-item:not(:nth-child(-n+4)) {
+.ingridients-item:not(:nth-child(-n + 4)) {
   display: none;
 }
 
@@ -400,11 +402,12 @@ button {
 /** -------------PROCESS START------------- */
 
 .process {
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 .process-wrap {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -419,13 +422,14 @@ button {
 
 .process-right-side {
   background-color: var(--white-cl);
-  padding: 32px;
+  padding: 20px 14px;
+  border-radius: 15px;
 }
 .process-list-title {
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.33; /* 133.333% */
-  margin-bottom: 28px;
+  line-height: 1.33;
+  margin-bottom: 20px;
 }
 
 .process-item {
@@ -435,7 +439,7 @@ button {
 }
 
 .process-item:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .process-item::before {
@@ -461,7 +465,7 @@ button {
 /** -------------PRODUCTS START------------- */
 
 .products {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 .products-title {
   margin-bottom: 50px;
@@ -469,14 +473,15 @@ button {
 .products-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px 18px;
+  gap: 32px;
 }
 .products-item {
   background-color: var(--white-cl);
   padding: 32px 20px;
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
-  width: calc((100% - 3 * 18px) / 4);
+  /* width: calc((100% - 3 * 18px) / 4); */
+  width: 100%;
   text-align: center;
 }
 .products-img {
@@ -510,12 +515,15 @@ button {
 /** -------------PRODUCTS END------------- */
 
 /** -------------TOP SELLERS START------------- */
-
+.sellers {
+  padding-top: 80px;
+}
 .sellers-title {
-  padding: 120px 0 50px 0;
+  margin-bottom: 50px;
 }
 .sellers-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 .sellers-item {
@@ -525,7 +533,11 @@ button {
   border-left: 1px solid rgba(17, 17, 17, 0.1);
   background-color: var(--white-cl);
   text-align: center;
-  width: calc((100% - 32px) / 3);
+  /* width: calc((100% - 32px) / 3); */
+  width: 100%;
+}
+.sellers-item:not(:first-child) {
+  display: none;
 }
 
 .sellers-cover {
