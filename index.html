@@ -26,13 +26,13 @@
   </head>
   <body>
     <!--? HEADER SECTION -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
           <a class="header-logo" href="./index.html"
             ><span class="header-logo-italic">SIMPLY</span>CHOCOLATE
 
-            <svg class="header-logo-icon" width="24" height="24">
+            <svg class="header-logo-icon" width="21" height="21">
               <use href="./src/img/icons.svg#icon-logo-chocolate"></use>
             </svg>
           </a>
@@ -57,7 +57,7 @@
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
-              <svg class="social-icon" width="24" height="24">
+              <svg class="social-icon" width="20" height="20">
                 <use href="./src/img/icons.svg#icon-instagram"></use>
               </svg>
             </a>
@@ -69,7 +69,7 @@
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
-              <svg class="social-icon" width="24" height="24">
+              <svg class="social-icon" width="20" height="20">
                 <use href="./src/img/icons.svg#icon-facebook"></use>
               </svg>
             </a>
@@ -81,14 +81,81 @@
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
-              <svg class="social-icon" width="24" height="24">
+              <svg class="social-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <button type="button" class="menu-open-btn" data-menu-open>
+          <svg class="menu-icon" width="28" height="28">
+            <use href="./src/img/icons.svg#icon-mob-menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div>
+          <button type="button" class="menu-close-btn" data-menu-close>
+            <svg class="close-menu-icon" width="20" height="20">
+              <use href="./src/img/icons.svg#icon-close-mob-menu"></use>
+            </svg>
+          </button>
+
+          <ul class="mob-menu-list">
+            <li class="mob-menu-item">
+              <a class="mob-menu-link" href="">Home</a>
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link" href="#made">How it's made?</a>
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link" href="#reviews">Chocolate is loved</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="mob-menu-social-list">
+          <li class="mob-menu-social-item">
+            <a
+              class="mob-menu-social-link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <svg class="mob-menu-social-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-menu-social-item">
+            <a
+              class="mob-menu-social-link"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <svg class="mob-menu-social-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-menu-social-item">
+            <a
+              class="mob-menu-social-link"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <svg class="mob-menu-social-icon" width="20" height="20">
                 <use href="./src/img/icons.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
 
     <!--? MAIN SECTION -->
     <main>
@@ -110,8 +177,7 @@
                 <span class="down-icon-wrap"
                   ><svg width="22" height="22" class="scroll-down-icon">
                     <use href="./src/img/icons.svg#icon-scroll-down"></use>
-                  </svg>
-                    </span
+                  </svg> </span
               ></a>
             </div>
           </div>
@@ -256,7 +322,21 @@
 
           <div class="process-wrap">
             <div class="process-left-side">
-              <img src="./src/img/made-img.jpg" alt="" width="600" height="400" />
+              <picture>
+                <source
+                  srcset="./src/img/made/made-img.jpg 1x, ./src/img/made/made-img-2x.jpg 2x"
+                  media="(min-width: 1166px)"
+                />
+                <source
+                  srcset="./src/img/made/made-img-tab.jpg 1x, ./src/img/made/made-img-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./src/img/made/made-img-mob.jpg 1x, ./src/img/made/made-img-mob-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./src/img/made-img.jpg" alt="liquid chocolate" width="614" />
+              </picture>
             </div>
 
             <div class="process-right-side">
@@ -403,6 +483,7 @@
             <li class="sellers-item">
               <div class="sellers-cover-wrap">
                 <img
+                  srcset="./src/img/sellers/img-1.jpg 1x, ./src/img/sellers/img-1-2x.jpg 2x"
                   class="sellers-img"
                   src="./src/img/sellers/img-1.jpg"
                   alt="CHOCOLATE WITH NUTS"
@@ -421,6 +502,7 @@
             <li class="sellers-item">
               <div class="sellers-cover-wrap">
                 <img
+                  srcset="./src/img/sellers/img-2.jpg, ./src/img/sellers/img-2-2x"
                   class="sellers-img"
                   src="./src/img/sellers/img-2.jpg"
                   alt="CHOCOLATE WITH FRUITS"
@@ -439,6 +521,7 @@
             <li class="sellers-item">
               <div class="sellers-cover-wrap">
                 <img
+                  srcset="./src/img/sellers/img-3.jpg, ./src/img/sellers/img-3-2x"
                   class="sellers-img"
                   src="./src/img/sellers/img-3.jpg"
                   alt="DARK CHOCOLATE"
@@ -696,5 +779,6 @@
     </div>
 
     <script src="./src/js/modal.js"></script>
+    <script src="./src/js/menu.js"></script>
   </body>
 </html>

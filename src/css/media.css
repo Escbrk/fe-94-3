@@ -11,14 +11,37 @@
 }
 
 @media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
+
+  .header-navigation-list {
+    display: flex;
+    gap: 24px;
+  }
+  .header-social {
+    display: flex;
+    gap: 12px;
+  }
   .container {
     max-width: 734px;
+  }
+
+  .header-logo {
+    margin-right: 83px;
   }
 
   .hero-wrap {
     padding: 670px 40px 40px;
     background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
       url(../img/hero-img-tab.jpg);
+  }
+
+  @media (min-device-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-wrap {
+      background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+        url(../img/hero-img-tab-2x.jpg);
+    }
   }
 
   .hero-title {
@@ -112,11 +135,28 @@
   .container {
     max-width: 1166px;
   }
+  .header-logo {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+
+  .header-logo-icon,
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
 
   .hero-wrap {
     padding: 380px 40px 40px;
     background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
       url(../img/hero-img.jpg);
+  }
+
+  @media (min-device-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-wrap {
+      background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+        url(../img/hero-img-2x.jpg);
+    }
   }
 
   .benefits-item {

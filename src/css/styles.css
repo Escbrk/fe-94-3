@@ -129,12 +129,11 @@ button {
 }
 
 .header-logo {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.11;
-  letter-spacing: -0.03em;
-  margin-right: 413px;
   color: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.26;
+  letter-spacing: -0.03em;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -145,8 +144,7 @@ button {
 }
 
 .header-navigation-list {
-  display: flex;
-  gap: 24px;
+  display: none;
 }
 
 /* .header-navigation-item {
@@ -172,7 +170,7 @@ button {
 
 .header-social {
   margin-left: auto;
-  display: flex;
+  display: none;
   gap: 14px;
 }
 
@@ -183,6 +181,74 @@ button {
 /* .header-social-link {
 
 } */
+
+.menu-open-btn {
+  margin-left: auto;
+  border: transparent;
+  background-color: transparent;
+}
+.menu-close-btn {
+  border: transparent;
+  background-color: transparent;
+}
+.menu-icon {
+  stroke: var(--main-cl);
+}
+.close-menu-icon {
+  stroke: var(--white-cl);
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--violet-cl);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 88px;
+  /* position: absolute;
+  top: 20px;
+  right: 20px; */
+}
+.menu-icon {
+}
+.mob-menu-list {
+  margin-bottom: 100px;
+}
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.mob-menu-link {
+  color: var(--white-cl);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.mob-menu-social-list {
+  display: flex;
+  gap: 14px;
+}
+.mob-menu-social-item {
+}
+.mob-menu-social-link {
+}
+.mob-menu-social-icon {
+  fill: transparent;
+  stroke: var(--white-cl);
+}
+.mob-menu-social-icon {
+}
 
 /** -------------HEADER END------------- */
 
@@ -201,6 +267,13 @@ button {
   background-size: cover;
   border-radius: 30px;
   padding: 395px 20px 20px;
+}
+
+@media (min-device-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-wrap {
+    background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+      url(../img/hero-img-mob-2x.jpg);
+  }
 }
 
 .hero-title {
